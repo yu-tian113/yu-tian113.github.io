@@ -1,0 +1,55 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width">
+  <script type="module" type="text/javascript" defer src="./js/main.js"></script>
+  <style>
+    :root{
+      --tile-gap: 5px;
+      --board-margin: 10px;
+    }
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      position: relative;
+    }
+    .board{
+      display: inline-grid;
+      grid-template-columns: repeat(var(--cols), 1fr);
+      grid-template-rows: repeat(var(--rows), 1fr);
+      grid-gap: var(--tile-gap);
+      margin: var(--board-margin);
+      position: relative;
+    }
+    .board.success::after{
+      background: rgba(0, 0, 0, .3);
+      color: white;
+      content: 'Congratulations, you solve the puzzle. Click to restart.';
+      height: 100%;
+      left: 0;
+      position: absolute;
+      text-align: center;
+      top: 0;
+      width: 100%;
+    }
+    .tile{
+      align-items: center;
+      background: slategray;
+      color: white;
+      display: flex;
+      font-size: 2vw;
+      height: var(--tile-size);
+      justify-content: center;
+      list-style: none;
+      transform: translate(var(--offsetX), var(--offsetY));
+      transition: transform .3s;
+      transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+      width: var(--tile-size);
+      will-change: transform;
+    }
+  </style>
+</head>
+<body>
+  <section class="playground"></section>
+</body>
+</html>

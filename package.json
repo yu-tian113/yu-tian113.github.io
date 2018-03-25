@@ -1,0 +1,12 @@
+{
+  "name": "canva-fed-screen",
+  "version": "0.0.1",
+  "description": "Canva FED code screen",
+  "scripts": {
+    "server": "ws --port 8001"
+  },
+  "author": "Tony Tian",
+  "devDependencies": {
+    "local-web-server": "^2.5.1"
+  }
+}
